@@ -1,0 +1,24 @@
+body {
+    color: #666;
+}
+
+header {
+    text-align: center;
+}
+
+main{
+    display: flex;
+}
+
+main .imagebox {
+    margin: 20px;
+}
+
+main .textbox {
+    margin: 18px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+}
