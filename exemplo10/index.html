@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery</title>
+</head>
+
+<body>
+
+    <style>
+        .saudacao {
+            display:none;
+        }
+    </style>
+
+    <div>
+        <form>
+            <label>Nome: </label>
+            <input type="text" name="nome" id="nome" placeholder="Informe seu nome">
+            <button type="button" id="botao">Confirmar Nome</button>
+        </form>
+        <hr>
+        <div class="saudacao" id="saudacao">
+            Olá, <span id="nomePessoa"></span>
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script>
+    //    document.getElementById("botao").addEventListener("click", function () {
+    //        var name = document.getElementById("nome").value;
+    //        document.querySelector("nomePessoa").innerHTML = name;
+    //        document.getElementById("saudacao").setAttribute("style", "display: inline;");
+    //    });
+    $("#botao").click(function (){
+        var nome = $("#nome").val();
+        $("#nomePessoa").html(nome);
+        $("#saudacao").show();
+    });
+    </script>
+
+</body>
+
+</html>
