@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo com Angular</title>
+</head>
+
+<body>
+    <h1>Exemplo com Angular</h1>
+    <div>
+        <form>
+            <label>Nome:</label>
+            <input type="text" name="nome" placeholder="Informe seu nome" ng-model="nome">
+            <button type="button">Confirmar Nome</button>
+        </form>
+        <hr>
+        <div ng-if="nome">
+            Olá, <span>{{nome}}</span>!
+        </div>
+    </div>
+    <script src="angular.min.js"></script>
+</body>
+
+</html>

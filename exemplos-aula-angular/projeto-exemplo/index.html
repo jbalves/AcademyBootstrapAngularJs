@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="meuAppChibata">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/angular-toastr/dist/angular-toastr.css" />
+    <title>Cadastro de Pessoas</title>
+</head>
+
+<body>
+    <div class="container" ng-controller="CadastroController">
+        <div class="row">
+            <h1>Cadastro</h1>
+            <form action="">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" ng-model="nome" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" ng-model="email" name="email">
+                </div>
+                <div class="form-group">
+                    <button ng-if="!id" type="button" class="btn btn-primary" ng-click="cadastrar()">Cadastrar</button>
+                    <button ng-if="id" type="button" class="btn btn-primary" ng-click="confirmarAtualizar()">Atualiza</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="rom">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="pessoa in pessoas">
+                            <td>{{pessoa.nome}}</td>
+                            <td>{{pessoa.email}}</td>
+                            <td>
+                                <button class="btn btn-danger" ng-click="excluir(pessoa.id)">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+
+                                <button class="btn btn-primary" ng-click="atualizar(pessoa.id)">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/angular.min.js"></script>
+    <script src="https://unpkg.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
