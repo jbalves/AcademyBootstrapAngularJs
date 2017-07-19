@@ -1,0 +1,58 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Produtos</a></li>
+    <li class="breadcrumb-item active">Lista</li>
+</ol>
+<!-- Título -->
+<div class="row">
+    <div class="col-md-12">
+        <h2>Produtos</h2>
+    </div>
+</div>
+<!-- Início: Lista de produtos -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading"> Lista de produtos cadastrados</div>
+            <div class="panel-body">
+                <p>Selecione um registro abaixo para atualizar ou remover</p>
+                <div class="text-right">
+                    <a ui-sref="produtosCadastrar" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-plus"></span> Adicionar 
+                    </a>
+                </div>
+            </div>
+            <!-- Início: Tabela -->
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">Código</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Quantidade</th>
+                        <th class="text-center">Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="text-center">1</th>
+                        <td>Nome do produto</td>
+                        <td>Descrição do produto</td>
+                        <td>10</td>
+                        <td>25</td>
+                        <td align="center">
+                            <button class="btn btn-primary">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                    </button>
+                            <button class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Fim: Tabela -->
+        </div>
+    </div>
+</div>
+<!-- Fim: Lista de produtos -->
