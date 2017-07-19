@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <title>Academy Store</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Cadastrar</title>
 </head>
 
 <body>
@@ -52,36 +54,55 @@
     <div class="container">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Produtos</a></li>
-            <li class="breadcrumb-item active">Nome do Produto</li>
+            <li class="breadcrumb-item active">Cadastrar</li>
         </ol>
         <!-- Título -->
         <div class="row">
             <div class="col-md-12">
-                <h2>Nome do Produto</h2>
+                <h2>Cadastro Produtos</h2>
             </div>
         </div>
-        <!-- Produtos -->
+        <!-- Início: Formulário -->
         <div class="row">
-            <div class="col-md-6">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h3>Nome Produto</h3>
-                <p><strong>Descrição:</strong> Descrição do produto...</p>
-                <p><strong>Quantidade:</strong> 0 <span class="text-danger">(esgotado)</span></p>
-                <p><strong>Valor:</strong> R$ 33,00</p>
-                <hr>
-                <button class="btn btn-primary">
-                    <span class="glyphicon glyphicon-chevron-left"></span> Voltar
-                </button>
-                <button class="btn btn-success" disabled>
-                    <span class="glyphicon glyphicon-plus"></span> Adicionar
-                </button>
+            <div class="col-md-12">
+                <fieldset>
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome do Produto</label>
+                            <input type="text" class="form-control" name="nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="descricao">Descrição</label>
+                            <textarea class="form-control" name="decricao" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="imagem">Imagem (URL)</label>
+                            <input type="text" class="form-control" name="imagem">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="email">Código</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="email">Valor</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="email">Quantidade</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <button class="btn btn-primary">Voltar</button>
+                            <button class="btn btn-success">Cadastrar</button>
+                        </div>
+                    </form>
+                </fieldset>
             </div>
         </div>
-        <!-- Fim: Produtos -->
+        <!-- Fim: Formulário -->
         <hr>
         <footer>
             <div class="row">
