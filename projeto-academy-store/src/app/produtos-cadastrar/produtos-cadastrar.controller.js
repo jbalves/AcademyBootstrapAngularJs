@@ -4,7 +4,6 @@ function ProdutosCadastrarController($scope, toastr, ProdutosService) {
     var vm = this;
     $scope.produto = {
         "nome": "",
-        "descricao": "",
         "codigo": "",
         "valor": "",
         "imagem": "",
@@ -22,8 +21,9 @@ function ProdutosCadastrarController($scope, toastr, ProdutosService) {
         ProdutosService.salvar($scope.produto).then(function (retorno) {
             console.log(retorno);
             toastr.success("Produto cadastrado com sucesso!");
+            vm.limparForm();
         }).catch(function (erro) {
-            toastr.error("Ocorreu ujm erro. tente novamente ou contate o suporte.");
+            toastr.error("Ocorreu um erro. tente novamente ou contate o suporte.");
             console.error(erro);
         });
     }
@@ -31,7 +31,6 @@ function ProdutosCadastrarController($scope, toastr, ProdutosService) {
     vm.limparForm = function () {
         $scope.produto = {
             "nome": "",
-            "descricao": "",
             "codigo": "",
             "valor": "",
             "imagem": "",

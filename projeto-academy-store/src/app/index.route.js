@@ -11,14 +11,14 @@
       .state('principal', {
         url: '/',
         templateUrl: 'app/principal/principal.html',
-        controller: '',
-        controllerAs: ''
+        controller: 'PrincipalController',
+        controllerAs: 'controller'
       })
       .state('produtosDetalhar', {
-        url: '/produtos-detalhar',
+        url: '/produtos-detalhar/:id',
         templateUrl: 'app/produtos-detalhar/produtos-detalhar.html',
-        controller: '',
-        controllerAs: ''
+        controller: 'ProdutosDetalharController',
+        controllerAs: 'controller'
       })
       .state('produtosListar', {
         url: '/produtos-listar',
@@ -30,6 +30,12 @@
         url: '/produtos-cadastrar',
         templateUrl: 'app/produtos-cadastrar/produtos-cadastrar.html',
         controller: 'ProdutosCadastrarController',
+        controllerAs: 'controller'
+      })
+      .state('produtosEditar', {
+        url: '/produtos-editar/:id',
+        templateUrl: 'app/produtos-cadastrar/produtos-cadastrar.html',
+        controller: 'ProdutosEditarController',
         controllerAs: 'controller'
       });
 

@@ -13,54 +13,18 @@
         </div>
         <!-- Produtos -->
         <div class="row text-center">
-            <div class="col-md-3">
+            
+            <div class="col-md-3" ng-repeat="produto in produtos">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500">
+                    <img src="{{produto.imagem}}">
                     <div class="caption">
-                        <h3>Produto</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis excepturi ducimus quas veniam explicabo
-                            accusamus fugiat facere sit odit quaerat iure assumenda, dicta illum neque, eveniet labore incidunt
-                            laboriosam quod?</p>
-                        <p><a ui-sref="produtosDetalhar" class="btn btn-primary">Ver Detalhes</a></p>
+                        <h3>{{produto.nome}}</h3>
+                        <p>{{produto.descricao}}</p>
+                        <p><button class="btn btn-primary" ng-click="controller.detalhar(produto._id)"></button> Ver Detalhes</p>
+                        <!-- <p><a ui-sref="produtosDetalhar" class="btn btn-primary">Ver Detalhes</a></p> -->
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500">
-                    <div class="caption">
-                        <h3>Produto</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nam repellat consequuntur quam
-                            magnam porro, provident hic nesciunt possimus nihil at, esse eaque eius quidem voluptatem doloribus
-                            enim! Dolore, hic.</p>
-                        <p><a ui-sref="produtosDetalhar" class="btn btn-primary">Ver Detalhes</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500">
-                    <div class="caption">
-                        <h3>Produto</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati debitis iure ratione id facere
-                            sunt neque illum inventore sed? Similique a, ipsa id doloribus mollitia aperiam animi eum fugiat.
-                            Aliquid.
-                        </p>
-                        <p><a ui-sref="produtosDetalhar" class="btn btn-primary">Ver Detalhes</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500">
-                    <div class="caption">
-                        <h3>Produto</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit neque odit quidem minima, ea necessitatibus,
-                            consequatur vero voluptatibus earum ad nulla alias facilis sit tempora suscipit placeat, quis
-                            inventore magni!</p>
-                        <p><a ui-sref="produtosDetalhar" class="btn btn-primary">Ver Detalhes</a></p>
-                    </div>
-                </div>
-            </div>
+            
         </div>
         <!-- Fim: Produtos -->
