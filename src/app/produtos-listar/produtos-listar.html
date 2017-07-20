@@ -1,0 +1,68 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Produtos</a></li>
+    <li class="breadcrumb-item active">Lista</li>
+</ol>
+<!-- Título -->
+<div class="row">
+    <div class="col-md-12">
+        <h2>Produtos</h2>
+    </div>
+</div>
+<!-- Início: Lista de produtos -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading"> Lista de produtos cadastrados</div>
+            <div class="panel-body">
+                <p>Selecione um registro abaixo para atualizar ou remover</p>
+                <div class="text-right">
+                    <a ui-sref="produtosCadastrar" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-plus"></span> Adicionar 
+                    </a>
+                </div>
+            </div>
+            <!-- Início: Tabela -->
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">Código</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Quantidade</th>
+                        <th class="text-center">Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-if="produtos.length == 0">    
+                        <td colspan="6">Nenhum produto dispoível no momento.</td>
+                    </tr>
+                    <tr ng-if="produtos.length > 0" ng-repeat="produto in produtos">
+                        <td class="text-center col-md-2">{{produto.codigo}}</th>
+                        <td class="col-md-4">{{produto.nome}}</td>
+                        <td class="col-md-2">
+                            <div class="thumbnail">
+                                <img src="{{produto.imagem}}">
+                                <div class="caption">
+                                    {{produto.descricao}}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-md-1">R$ {{produto.valor}}</td>
+                        <td class="col-md-1">{{produto.quantidade}}</td>
+                        <td class="text-center col-md-2">
+                            <button class="btn btn-primary" ng-click="controller.editar(produto._id)">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                    </button>
+                            <button class="btn btn-danger" ng-click="controller.excluir(produto._id)">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Fim: Tabela -->
+        </div>
+    </div>
+</div>
+<!-- Fim: Lista de produtos -->
